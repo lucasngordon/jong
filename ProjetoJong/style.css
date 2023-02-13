@@ -1,18 +1,23 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: gray;
+    background-color: #ebe5c5;
+    background-image: url('imagensJong/jong_cabeca.png');
+    background-size: 100px 100px;
 }
 
 header {
+    color: #FFFF42;
     font-size: 40px;
     text-align: center;
 }
 
 main {
+    color: #FFFF42;
     font-size: 20px;
 }
 
 a {
+    color: #FFFF42;
     text-decoration: none;
 }
 
@@ -21,7 +26,7 @@ a:hover {
 }
 
 a:visited {
-    color: black;
+    color: #FFFF42;
 }
 
 hr {
