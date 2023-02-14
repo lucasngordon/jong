@@ -1,4 +1,4 @@
-@charset "UTF-8"
+@charset "UTF-8";
 
 :root {
     --cor0: #ebe5c5;
@@ -7,6 +7,12 @@
     --cor3: #0001E0;
     --cor4: #1919FF;
     --cor5: #000094;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+
 }
 
 body {
@@ -23,7 +29,6 @@ header {
     text-align: center;
     background-image: linear-gradient(to bottom, var(--cor4), var(--cor5));
     padding-top: 40px;
-    margin-top: -10px;
 }
 
 header > h1 {
