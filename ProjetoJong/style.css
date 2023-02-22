@@ -76,8 +76,8 @@ main {
 }
 
 main img {
-    width: 100%;
-    height: 100%;
+    width: 96vh;
+    height: 96vh;
 }
 
 a {
