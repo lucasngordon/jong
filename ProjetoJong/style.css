@@ -31,7 +31,6 @@ header {
     background-image: linear-gradient(to bottom, var(--cor4), var(--cor5));
 
     min-height: 150px;
-    min-width: 150px;
     padding-top: 40px;
 }
 
@@ -77,9 +76,13 @@ main {
 }
 
 main img {
+    width: 100%;
+}
+
+main img.pequena {
+    width: 50%;
+    display: block;
     margin: auto;
-    width: 96vh;
-    height: 96vh;
 }
 
 a {
