@@ -23,18 +23,16 @@ body {
 }
 
 header {
-    color: var(--cor1);
-    font-size: 40px;
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
-
     background-image: linear-gradient(to bottom, var(--cor4), var(--cor5));
-
+    text-align: center;
     min-height: 150px;
     padding-top: 40px;
+    font-size: 40px;
 }
 
 header > h1 {
+    color: var(--cor1);
+    font-family: 'Courier New', Courier, monospace;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 267);
 }
 
@@ -76,7 +74,7 @@ main {
 }
 
 main img {
-    width: 50%
+    width: 75%
 }
 
 a {
