@@ -26,7 +26,6 @@ header {
     background-image: linear-gradient(to bottom, var(--cor4), var(--cor5));
     text-align: center;
     min-height: 150px;
-    min-width: 100%;
     padding-top: 40px;
     font-size: 40px;
 }
