@@ -14,6 +14,11 @@
             font-style: normal;
             }
 
+            body {
+                background-image: url(imagensJong/jong_militar_2.jpg);
+                background-position: left center;
+            }
+
             h1 {
                 font-size: 100px;
                 font-family: 'AMONGUS', Arial, Helvetica, sans-serif;
@@ -27,10 +32,28 @@
                 margin-right: auto;
                 margin-left: auto;
             }
+
+            button {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
         </style>
     </head>
     <body>
         <h1><strong>AMONGUS</strong></h1>
+        <audio id="audio" src="audiosJong/amongus.mp3" loop></audio>
         <img src="imagensJong/amongus.png" alt="AMONGUS" height="600" width="1000" class="center">
+        <button id="botao">Voltar para o menu principal</button>
+
+        <script>
+            var audio = document.getElementById('audio')
+            var botao = document.getElementById('botao')
+            botao.addEventListener('click', play)
+
+            function play() {
+                audio.play()
+            }
+        </script>
     </body>
 </html>
