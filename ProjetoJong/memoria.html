@@ -22,6 +22,7 @@
         <a href="index.html">Página Inicial</a>
         <a href="galeria.html">Galeria do Jong</a>
     </nav>
+    <script type="module" src="memoria.js"></script>
     <section>
         <div>
             <img src="imagensJong/backcard.jpg" alt="backcard" class="verso">
@@ -31,6 +32,33 @@
             <img src="imagensJong/backcard.jpg" alt="backcard" class="verso">
         </div>
     </section>
-    <script src="memoria.js"></script>
+    <script type="module">
+        const imagens = [
+            "ProjetoJong/imagensJong/jong_cabeca.png", "ProjetoJong/imagensJong/amongus.png", "ProjetoJong/imagensJong/jong_bigode.jpg", "ProjetoJong/imagensJong/jong_bolsonaro.png",
+            "ProjetoJong/imagensJong/jong_careca.png", "ProjetoJong/imagensJong/jong_militar_1.jpg", "ProjetoJong/imagensJong/jong_militar_2.jpg", "ProjetoJong/imagensJong/jong_mineiro.png",
+            "ProjetoJong/imagensJong/jong_negro.jpg", "ProjetoJong/imagensJong/jong_oculos.jpg", "ProjetoJong/imagensJong/jong_safado.png", "ProjetoJong/imagensJong/jong_sorrindo.png", "ProjetoJong/imagensJong/JONG.jpg" 
+        ];
+        const deck = createDeck(imagens);
+        for (var i = 0; i < deck.length; i++) {
+
+            //var cardDiv = document.createElement('div');
+            var backImg = document.createElement('img');
+            backImg.src = 'imagensJong/backcard.jpg';
+            backImg.alt = 'backcard';
+            backImg.className = 'verso';
+
+            var frontImg = document.createElement('img');
+            frontImg.src = deck[i].front;
+            frontImg.alt = 'frente';
+            frontImg.className = 'frente';
+
+            // // Append the 'img' elements to the 'div' element
+            // cardDiv.appendChild(backImg);
+            // cardDiv.appendChild(frontImg);
+
+            // Append the 'div' element to the parent element
+            // parentElement.appendChild(cardDiv);
+        }
+    </script>
 </body>
 </html>
