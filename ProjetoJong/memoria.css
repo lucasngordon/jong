@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor0: #ebe5c5;
+    --cor1: #E0B800;
+    --cor2: #947900;
+    --cor3: #0001E0;
+    --cor4: #1919FF;
+    --cor5: #000094;
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor4), var(--cor5));
+    text-align: center;
+    width: 100%;
+    padding: 40px 0;
+    font-size: 40px;
+}
+
+header h1 {
+    color: var(--cor1);
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+    margin: 0;
+}
+
+nav {
+    width: 100%;
+    background-color: var(--cor5);
+    padding: 10px 0;
+}
+
+nav a {
+    color: var(--cor1);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--cor2);
+    text-decoration: underline;
+}
+
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #0001E0;
+    background-image: url('imagensJong/jong_cabeca.png');
+    background-size: 100px 100px;
+}
+
+.caixa {
+    position: relative;
+    background-color: var(--cor0);
+    border: 5px solid var(--cor2);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    width: 95%;
+    max-width: 700px;
+    margin: 20px auto;
+    padding-bottom: 60px;
+}
+
+.jogo {
+    width: 90vw;
+    max-width: 640px;
+    margin-top: 20px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: center;
+    align-content: center;
+    perspective: 1000px;
+}
+
+.carta {
+    background: var(--cor4);
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 5px;
+    position: relative;
+    cursor: pointer;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.carta:active {
+    transform: scale(.97);
+    transition: transform .2s;
+}
+
+.carta.virada {
+    transform: rotateY(180deg);
+}
+
+.carta img {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    border-radius: 5px;
+    position: absolute;
+    backface-visibility: hidden;
+    object-fit: cover;
+    display: block;
+}
+
+.carta img.frente {
+    object-fit: cover;
+    padding: 10px;
+}
+
+.carta img.verso {
+    object-fit: contain;
+    padding: 20px;
+    background-color: var(--cor4);
+}
+
+.frente {
+    transform: rotateY(180deg);
+}
+
+.carta .verso {
+    transform: rotateY(0deg);
+}
+
+.caixa button {
+    background: var(--cor4);
+    color: var(--cor1);
+    position: absolute;
+    bottom: 15px;                       
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
